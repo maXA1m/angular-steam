@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OnlineGamer</title>
+    <base href="~/" />
+
+    <meta name="theme-color" content="#000">
+
+    <link rel="stylesheet" href="~/dist/vendor.css" asp-append-version="true" />
+
+</head>
+<body style="background: #000 !important;">
+    @RenderBody()
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

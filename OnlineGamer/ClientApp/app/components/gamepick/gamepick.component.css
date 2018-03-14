@@ -1,0 +1,62 @@
+﻿#pick-game-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.game-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 300px !important;
+    height: 180px !important;
+    padding: 15px !important;
+    margin: 30px !important;
+    border-radius: 5px;
+}
+
+.game-button h3,
+.game-button:hover h3 {
+    color: #eee;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.game-button {
+    text-decoration: none;
+    transition: all ease .3s;
+}
+
+.game-button:hover {
+    text-decoration: none;
+    transform: translateY(-10px);
+}
+
+.game-button[data-game-type="csgo"] {
+    background: #c21500; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffc500, #c21500); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffc500, #c21500); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.game-button[data-game-type="dota"] {
+    background: #F00000; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #DC281E, #F00000); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #DC281E, #F00000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.game-button[data-game-type="pubg"] {
+    background: #FF4E50; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F9D423, #FF4E50); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F9D423, #FF4E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.game-button[data-game-type="gta"] {
+    background: #56ab2f; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #a8e063, #56ab2f); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #a8e063, #56ab2f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

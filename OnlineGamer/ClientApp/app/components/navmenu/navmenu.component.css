@@ -1,0 +1,95 @@
+li .glyphicon {
+    margin-right: 10px;
+}
+
+/* Highlighting rules for nav menu items */
+li.link-active#news-link a,
+li.link-active#news-link a:hover,
+li.link-active#news-link a:focus,
+li#news-link a:hover,
+li#news-link a:focus {
+    background: #bc4e9c !important; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f80759, #bc4e9c) !important; /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f80759, #bc4e9c) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white !important;
+}
+
+li.link-active#stats-link a,
+li.link-active#stats-link a:hover,
+li.link-active#stats-link a:focus,
+li#stats-link a:hover,
+li#stats-link a:focus {
+    background: #11998e !important; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #38ef7d, #11998e) !important; /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #38ef7d, #11998e) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white !important;
+}
+
+li.link-active#forum-link a,
+li.link-active#forum-link a:hover,
+li.link-active#forum-link a:focus,
+li#forum-link a:hover,
+li#forum-link a:focus {
+    background: #396afc !important; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2948ff, #396afc) !important; /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2948ff, #396afc) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white !important;
+}
+
+/* Keep the nav menu independent of scrolling and on top of other items */
+.main-nav {
+    position: fixed; 
+    height: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+/* Navbar color */
+.main-nav,
+.navbar {
+    background: #000 !important;
+}
+
+@media (min-width: 768px) {
+    /* On small screens, convert the nav menu to a vertical sidebar */
+    .main-nav {
+        height: 100%;
+        width: calc(100%/6 - 20px);
+    }
+    .navbar {
+        border-radius: 0px;
+        border-width: 0px;
+        height: 100%;
+    }
+    .navbar-header {
+        float: none;
+    }
+    .navbar-brand {
+        display: none !important;
+    }
+    .navbar-collapse {
+        border-top: 1px solid #444;
+        padding: 0px;
+    }
+    .navbar ul {
+        float: none;
+    }
+    .navbar li {
+        float: none;
+        font-size: 15px;
+        margin: 6px;
+    }
+    .navbar li a {
+        padding: 10px 16px;
+        border-radius: 4px;
+    }
+    .navbar a {
+        /* If a menu item's text is too long, truncate it */
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
