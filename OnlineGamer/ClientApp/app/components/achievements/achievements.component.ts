@@ -3,16 +3,16 @@ import { ActivatedRoute } from '@angular/router';
 import { Http } from '@angular/http';
 
 import { Game } from '../../models/Game';
-import { GameNews } from '../../models/GameNews';
+import { GameAchievement } from '../../models/GameAchievement';
 
 @Component({
-    selector: 'news',
-    templateUrl: './news.component.html',
-    styleUrls: ['./news.component.css']
+    selector: 'achievements',
+    templateUrl: './achievements.component.html',
+    styleUrls: ['./achievements.component.css']
 })
-export class NewsComponent {
+export class AchievementsComponent {
     game: Game;
-    news: GameNews[];
+    achievements: GameAchievement[];
 
     constructor(private activateRoute: ActivatedRoute, http: Http, @Inject('BASE_URL') baseUrl: string) {
         /*  Getting data from route  */
@@ -21,8 +21,8 @@ export class NewsComponent {
         this.game.name = activateRoute.snapshot.params['gameName'];
 
         /*  Getting news for game  */
-        http.get(baseUrl + 'api/news/' + this.game.id).subscribe(result => {
-            this.news = result.json().appnews.newsitems as GameNews[];
+        http.get(baseUrl + 'api/achievements/' + this.game.id).subscribe(result => {
+            this.achievements = result.json().achievementpercentages.achievements as GameAchievement[];
         }, error => console.error(error));
     }
 }

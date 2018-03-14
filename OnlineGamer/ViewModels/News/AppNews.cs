@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace OnlineGamer.ViewModels
+namespace OnlineGamer.ViewModels.News
 {
     public class AppNews
     {

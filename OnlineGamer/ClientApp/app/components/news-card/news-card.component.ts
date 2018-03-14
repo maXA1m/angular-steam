@@ -2,9 +2,9 @@
 import { GameNews } from '../../models/GameNews';
 
 @Component({
-    selector: 'newscard',
-    templateUrl: './newscard.component.html',
-    styleUrls: ['./newscard.component.css']
+    selector: 'news-card',
+    templateUrl: './news-card.component.html',
+    styleUrls: ['./news-card.component.css']
 })
 export class NewsCardComponent {
     @Input() gamenew: GameNews;

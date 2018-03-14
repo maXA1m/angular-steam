@@ -10,7 +10,7 @@
     color: #eee;
     margin-bottom: 45px;
     overflow: hidden;
-    font-size: 1.4vw;
+    font-size: 1.2vw;
 }
 
 .game-news-card a.game-news-card-title,
@@ -60,6 +60,6 @@
 @media (max-width: 768px) {
     .game-news-card {
         width: 96vw;
-        font-size: 4.4vw;
+        font-size: 4.2vw;
     }
 }

@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace OnlineGamer.ViewModels
+namespace OnlineGamer.ViewModels.News
 {
     public class SteamNewsResponse
     {

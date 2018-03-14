@@ -25,6 +25,7 @@
     color: #eee;
     font-weight: bold;
     text-decoration: none;
+    font-size: 5rem;
 }
 
 .game-button {
@@ -41,22 +42,38 @@
     background: #c21500; /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #ffc500, #c21500); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #ffc500, #c21500); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: url(/images/csgo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .game-button[data-game-type="dota"] {
     background: #F00000; /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #DC281E, #F00000); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #DC281E, #F00000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: url(/images/dota.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .game-button[data-game-type="pubg"] {
     background: #FF4E50; /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #F9D423, #FF4E50); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #F9D423, #FF4E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: url(/images/pubg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .game-button[data-game-type="gta"] {
     background: #56ab2f; /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #a8e063, #56ab2f); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #a8e063, #56ab2f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: url(/images/gta.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }

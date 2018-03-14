@@ -8,8 +8,9 @@ import { AppComponent } from './components/app/app.component';
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { GamepickComponent } from './components/gamepick/gamepick.component';
 import { NewsComponent } from './components/news/news.component';
-import { NewsCardComponent } from './components/newscard/newscard.component';
-import { StatsComponent } from './components/stats/stats.component';
+import { NewsCardComponent } from './components/news-card/news-card.component';
+import { AchievementsComponent } from './components/achievements/achievements.component';
+import { AchievementCardComponent } from './components/achievement-card/achievement-card.component';
 import { ForumComponent } from './components/forum/forum.component';
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ForumComponent } from './components/forum/forum.component';
         GamepickComponent,
         NewsComponent,
         NewsCardComponent,
-        StatsComponent,
+        AchievementsComponent,
+        AchievementCardComponent,
         ForumComponent
     ],
     imports: [
@@ -30,7 +32,7 @@ import { ForumComponent } from './components/forum/forum.component';
             { path: '', redirectTo: 'news', pathMatch: 'full' },
             { path: ':type', component: GamepickComponent },
             { path: 'news/:gameId/:gameName', component: NewsComponent },
-            { path: 'stats/:gameId/:gameName', component: StatsComponent },
+            { path: 'achievements/:gameId/:gameName', component: AchievementsComponent },
             { path: 'forum/:gameId/:gameName', component: ForumComponent },
             { path: '**', redirectTo: 'news' }
         ])

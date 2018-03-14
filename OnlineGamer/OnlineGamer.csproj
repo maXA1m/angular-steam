@@ -22,16 +22,20 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\app\components\achievement-card\achievement-card.component.ts" />
     <None Remove="ClientApp\app\components\gamepick\gamepick.component.ts" />
-    <None Remove="ClientApp\app\components\newscard\newscard.component.ts" />
+    <None Remove="ClientApp\app\components\news-card\news-card.component.ts" />
     <None Remove="ClientApp\app\Game.ts" />
+    <None Remove="ClientApp\app\models\GameAchievement.ts" />
     <None Remove="ClientApp\app\models\GameNews.ts" />
   </ItemGroup>
 
   <ItemGroup>
-    <TypeScriptCompile Include="ClientApp\app\components\newscard\newscard.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\achievement-card\achievement-card.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\news-card\news-card.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\models\Game.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\gamepick\gamepick.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\models\GameAchievement.ts" />
     <TypeScriptCompile Include="ClientApp\app\models\GameNews.ts" />
   </ItemGroup>
 

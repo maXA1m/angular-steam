@@ -6,7 +6,7 @@
     author: string;
     contents: string;
     feedlabel: string;
-    date: Date;
+    date: number;
     feedname: string;
     feed_type: number;
     appid: number;
