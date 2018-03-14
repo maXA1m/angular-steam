@@ -1,3 +1,5 @@
-<p *ngFor="let new of news" [innerHTML]="new.contents">
+<h1>NEWS</h1>
 
-</p>
+<section id="news-section">
+    <newscard *ngFor="let n of news" [gamenew]="n"></newscard>
+</section>

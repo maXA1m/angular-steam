@@ -6,7 +6,8 @@ import { Http } from '@angular/http';
 
 @Component({
     selector: 'news',
-    templateUrl: './news.component.html'
+    templateUrl: './news.component.html',
+    styleUrls: ['./news.component.css']
 })
 export class NewsComponent {
     game: Game;
@@ -19,7 +20,7 @@ export class NewsComponent {
         this.game.name = activateRoute.snapshot.params['gameName'];
 
         /*  Getting news for game  */
-        http.get(baseUrl + '/api/news/' + this.game.id).subscribe(result => {
+        http.get(baseUrl + 'api/news/' + this.game.id).subscribe(result => {
             this.news = result.json().appnews.newsitems as GameNews[];
         }, error => console.error(error));
     }

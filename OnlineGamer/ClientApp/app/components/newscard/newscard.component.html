@@ -1,0 +1,6 @@
+﻿<article class="game-news-card">
+    <a [attr.href]="gamenew.url" [attr.title]="gamenew.title" class="game-news-card-title">{{gamenew.title}}</a>
+    <p [innerHTML]="gamenew.contents" class="game-news-card-text"></p>
+    <p class="game-news-card-date">{{gamenew.date*1000 | date:'fullDate'}}</p>
+    <a [attr.href]="gamenew.url" [attr.title]="gamenew.title" class="game-news-card-more">Go to Article</a>
+</article>

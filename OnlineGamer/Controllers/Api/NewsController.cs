@@ -14,6 +14,7 @@ namespace OnlineGamer.Controllers.Api
     public class NewsController : Controller
     {
         const string API_KEY = "B6143603063836FCAAB0485A9EE05012";
+        const string API_URI = "https://api.steampowered.com";
 
         [Route("api/news/{gameId}")]
         public async Task<IActionResult> GetNews(int gameId)
@@ -22,8 +23,8 @@ namespace OnlineGamer.Controllers.Api
             {
                 try
                 {
-                    steam.BaseAddress = new Uri($"https://api.steampowered.com");
-                    var response = await steam.GetAsync($"/ISteamNews/GetNewsForApp/v0002/?appid={gameId}&count=50&key={API_KEY}");
+                    steam.BaseAddress = new Uri(API_URI);
+                    var response = await steam.GetAsync($"/ISteamNews/GetNewsForApp/v0002/?appid={gameId}&count=100&key={API_KEY}");
                     response.EnsureSuccessStatusCode();
 
                     string result = await response.Content.ReadAsStringAsync();

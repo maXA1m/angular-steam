@@ -8,6 +8,7 @@ import { AppComponent } from './components/app/app.component';
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { GamepickComponent } from './components/gamepick/gamepick.component';
 import { NewsComponent } from './components/news/news.component';
+import { NewsCardComponent } from './components/newscard/newscard.component';
 import { StatsComponent } from './components/stats/stats.component';
 import { ForumComponent } from './components/forum/forum.component';
 
@@ -17,6 +18,7 @@ import { ForumComponent } from './components/forum/forum.component';
         NavMenuComponent,
         GamepickComponent,
         NewsComponent,
+        NewsCardComponent,
         StatsComponent,
         ForumComponent
     ],

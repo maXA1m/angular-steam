@@ -34,7 +34,7 @@
 
 .game-button:hover {
     text-decoration: none;
-    transform: translateY(-10px);
+    transform: scale(1.05);
 }
 
 .game-button[data-game-type="csgo"] {
