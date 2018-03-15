@@ -1,0 +1,9 @@
+<h1>ACHIEVEMENTS LIST</h1>
+
+<section id="achievements-section" *ngIf="achievements.length;else error_message">
+    <achievement-list-card *ngFor="let a of achievements" [achievement]="a"></achievement-list-card>
+</section>
+
+<ng-template id="achievements-section" #error_message>
+    <p class="achievements-empty">Game has no achievements</p>
+</ng-template>

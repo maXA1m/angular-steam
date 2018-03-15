@@ -22,21 +22,33 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="ClientApp\app\components\achievement-card\achievement-card.component.ts" />
-    <None Remove="ClientApp\app\components\gamepick\gamepick.component.ts" />
+    <None Remove="ClientApp\app\components\achievement-list-card\achievement-list-card.component.ts" />
+    <None Remove="ClientApp\app\components\achievement-stats-card\achievement-stats-card.component.ts" />
+    <None Remove="ClientApp\app\components\achievementspick\achievementspick.component.ts" />
     <None Remove="ClientApp\app\components\news-card\news-card.component.ts" />
+    <None Remove="ClientApp\app\components\newspick\newspick.component.ts" />
+    <None Remove="ClientApp\app\components\userpick\userpick.component.ts" />
     <None Remove="ClientApp\app\Game.ts" />
-    <None Remove="ClientApp\app\models\GameAchievement.ts" />
-    <None Remove="ClientApp\app\models\GameNews.ts" />
+    <None Remove="ClientApp\app\models\friend.model.ts" />
+    <None Remove="ClientApp\app\models\game-achievement-details.model.ts" />
+    <None Remove="ClientApp\app\models\game-acivement.model.ts" />
+    <None Remove="ClientApp\app\models\game-news.model.ts" />
+    <None Remove="ClientApp\app\models\user.model.ts" />
   </ItemGroup>
 
   <ItemGroup>
-    <TypeScriptCompile Include="ClientApp\app\components\achievement-card\achievement-card.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\achievement-list-card\achievement-list-card.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\achievement-stats-card\achievement-stats-card.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\achievementspick\achievementspick.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\news-card\news-card.component.ts" />
-    <TypeScriptCompile Include="ClientApp\app\models\Game.ts" />
-    <TypeScriptCompile Include="ClientApp\app\components\gamepick\gamepick.component.ts" />
-    <TypeScriptCompile Include="ClientApp\app\models\GameAchievement.ts" />
-    <TypeScriptCompile Include="ClientApp\app\models\GameNews.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\userpick\userpick.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\models\friend.model.ts" />
+    <TypeScriptCompile Include="ClientApp\app\models\game-achievement-details.model.ts" />
+    <TypeScriptCompile Include="ClientApp\app\models\game.model.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\newspick\newspick.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\models\game-acivement.model.ts" />
+    <TypeScriptCompile Include="ClientApp\app\models\game-news.model.ts" />
+    <TypeScriptCompile Include="ClientApp\app\models\user.model.ts" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

@@ -1,19 +1,16 @@
 ﻿import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Game } from '../../models/Game';
+import { Game } from '../../models/game.model';
 
 @Component({
-    selector: 'gamepick',
-    templateUrl: './gamepick.component.html',
-    styleUrls: ['./gamepick.component.css']
+    selector: 'achievementspick',
+    templateUrl: './achievementspick.component.html',
+    styleUrls: ['./achievementspick.component.css']
 })
-export class GamepickComponent {
-    type: string;
+export class AchievementspickComponent {
     games: Game[];
 
-    constructor(private activateRoute: ActivatedRoute) {
-        this.type = activateRoute.snapshot.params['type'];
-
+    constructor() {
         this.games = [
             new Game(730, 'CS : GO', 'csgo'),
             new Game(570, 'DOTA 2', 'dota'),

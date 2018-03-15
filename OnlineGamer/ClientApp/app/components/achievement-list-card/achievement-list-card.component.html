@@ -1,0 +1,10 @@
+﻿<article class="achievement-card">
+    <div class="achievement-card-top-panel">
+        <img class="achievement-card-description" [attr.alt]="achievement.displayName" title="Achievement name" [attr.src]="achievement.icon">
+        <div class="achievement-card-name-panel">
+            <p class="achievement-card-displayName" title="Achievement name">{{achievement.displayName}}</p>
+            <small title="Achievement api name">{{achievement.name}}</small>
+        </div>
+    </div>
+    <p class="achievement-card-description" title="Achievement description">{{achievement.description}}</p>
+</article>

@@ -1,0 +1,47 @@
+﻿.achievement-card {
+    width: 70vw;
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    border: 5px solid #23C186;
+    color: #eee;
+    margin-bottom: 45px;
+    overflow: hidden;
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+.achievement-card-top-panel {
+    display: flex;
+    width: 70%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.achievement-card-name-panel {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.achievement-card-description {
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .achievement-card {
+        width: 96vw;
+        font-size: 5vw;
+    }
+
+    .achievement-card-top-panel {
+        width: 100%;
+    }
+}

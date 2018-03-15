@@ -1,4 +1,17 @@
-﻿#pick-game-menu {
+﻿h1 {
+    font-size: 5rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 45px;
+    width: 100%;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    color: #E32071;
+}
+
+#pick-game-menu {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

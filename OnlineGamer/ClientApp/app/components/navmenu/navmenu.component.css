@@ -18,22 +18,22 @@ li#news-link a:focus {
     color: white !important;
 }
 
-li.link-active#stats-link a,
-li.link-active#stats-link a:hover,
-li.link-active#stats-link a:focus,
-li#stats-link a:hover,
-li#stats-link a:focus {
+li.link-active#achievements-link a,
+li.link-active#achievements-link a:hover,
+li.link-active#achievements-link a:focus,
+li#achievements-link a:hover,
+li#achievements-link a:focus {
     background: #11998e !important; /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #38ef7d, #11998e) !important; /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #38ef7d, #11998e) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: white !important;
 }
 
-li.link-active#forum-link a,
-li.link-active#forum-link a:hover,
-li.link-active#forum-link a:focus,
-li#forum-link a:hover,
-li#forum-link a:focus {
+li.link-active#user-link a,
+li.link-active#user-link a:hover,
+li.link-active#user-link a:focus,
+li#user-link a:hover,
+li#user-link a:focus {
     background: #396afc !important; /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #2948ff, #396afc) !important; /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #2948ff, #396afc) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */

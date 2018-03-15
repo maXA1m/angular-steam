@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 5px;
-    background: #23C186;
+    border: 5px solid #23C186;
     color: #eee;
     margin-bottom: 45px;
     overflow: hidden;

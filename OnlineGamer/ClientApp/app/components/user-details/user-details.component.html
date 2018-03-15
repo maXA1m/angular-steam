@@ -1,0 +1,31 @@
+<h1 *ngIf="user">{{user.personaname}}</h1>
+<h4 *ngIf="user">{{user.realname}}</h4>
+
+<section id="user-section" *ngIf="user">
+    <div id="user-card-top-panel">
+        <img [attr.src]="user.avatarfull" [attr.title]="user.personaname" [attr.alt]="user.personaname" />
+        <div class="user-card-times">
+            <p>Last logoff:</p>
+            <p>{{user.lastlogoff*1000 | date:'fullDate'}}</p>
+            <p>Time created:</p>
+            <p>{{user.timecreated*1000 | date:'fullDate'}}</p>
+        </div>
+    </div>
+
+    <a [attr.href]="user.profileurl" [attr.title]="user.personaname" id="profile-url">profile url</a>
+
+    <div id="user-card-second-panel" *ngIf="user.gameextrainfo">
+        <p>Currently in-game: {{user.gameextrainfo}}</p>
+        <p>Game id: {{user.gameid}}</p>
+    </div>
+
+    <h2 *ngIf="friends.length">FRIENDS</h2>
+
+    <div id="user-card-friends-panel" *ngIf="friends.length">
+        <div class="friend-card" *ngFor="let friend of friends">
+            <a [attr.href]="'/user/' + friend.steamid" [attr.title]="friend.steamid">profile URL</a>
+            <p>Friends since: {{friend.friend_since*1000 | date:'fullDate'}}</p>
+        </div>
+    </div>
+
+</section>

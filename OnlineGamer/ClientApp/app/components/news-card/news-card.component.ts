@@ -1,5 +1,5 @@
 ﻿import { Component, Input } from '@angular/core';
-import { GameNews } from '../../models/GameNews';
+import { GameNews } from '../../models/game-news.model';
 
 @Component({
     selector: 'news-card',

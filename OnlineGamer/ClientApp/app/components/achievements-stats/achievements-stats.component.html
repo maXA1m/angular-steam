@@ -1,7 +1,7 @@
-<h1>ACHIEVEMENTS</h1>
+<h1>ACHIEVEMENTS STATS</h1>
 
 <section id="achievements-section" *ngIf="achievements.length;else error_message">
-    <achievement-card *ngFor="let a of achievements" [achievement]="a"></achievement-card>
+    <achievement-stats-card *ngFor="let a of achievements" [achievement]="a"></achievement-stats-card>
 </section>
 
 <ng-template id="achievements-section" #error_message>

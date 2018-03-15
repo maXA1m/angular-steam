@@ -1,0 +1,56 @@
+﻿h1 {
+    font-size: 5rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 45px;
+    width: 100%;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    color: #3158FD;
+}
+
+#userpick-section {
+
+}
+
+#input-group {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#input-group label {
+    font-size: 3rem;
+}
+
+#input-group input {
+    width: 40vw;
+}
+
+#input-group small {
+    font-size: 1.3rem;
+}
+
+#radio-group label {
+    font-size: 1.5rem;
+}
+
+#submit-button,
+#submit-button:focus {
+    background: #3158FD !important;
+    border: 2px solid #3158FD !important;
+}
+
+.text-white {
+    color: #eee !important;
+}
+
+@media (max-width: 768px) {
+    #input-group input {
+        width: 100%;
+    }
+}

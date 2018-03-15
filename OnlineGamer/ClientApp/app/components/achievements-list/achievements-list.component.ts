@@ -2,17 +2,17 @@ import { Component, Inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Http } from '@angular/http';
 
-import { Game } from '../../models/Game';
-import { GameAchievement } from '../../models/GameAchievement';
+import { Game } from '../../models/game.model';
+import { GameAchievementDetails } from '../../models/game-achievement-details.model';
 
 @Component({
-    selector: 'achievements',
-    templateUrl: './achievements.component.html',
-    styleUrls: ['./achievements.component.css']
+    selector: 'achievements-list',
+    templateUrl: './achievements-list.component.html',
+    styleUrls: ['./achievements-list.component.css']
 })
-export class AchievementsComponent {
+export class AchievementsListComponent {
     game: Game;
-    achievements: GameAchievement[];
+    achievements: GameAchievementDetails[];
 
     constructor(private activateRoute: ActivatedRoute, http: Http, @Inject('BASE_URL') baseUrl: string) {
         /*  Getting data from route  */
@@ -21,8 +21,8 @@ export class AchievementsComponent {
         this.game.name = activateRoute.snapshot.params['gameName'];
 
         /*  Getting news for game  */
-        http.get(baseUrl + 'api/achievements/' + this.game.id).subscribe(result => {
-            this.achievements = result.json().achievementpercentages.achievements as GameAchievement[];
+        http.get(baseUrl + 'api/achievements/details/' + this.game.id).subscribe(result => {
+            this.achievements = result.json().game.availableGameStats.achievements as GameAchievementDetails[];
         }, error => console.error(error));
     }
 }
