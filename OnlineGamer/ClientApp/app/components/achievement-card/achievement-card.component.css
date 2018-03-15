@@ -14,11 +14,14 @@
 }
 
 .achievement-card-name {
-
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    width: 75%;
 }
 
 .achievement-card-percent {
-
+    width: 25%;
 }
 
 @media (max-width: 768px) {
