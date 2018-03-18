@@ -1,7 +1,7 @@
-<h1 *ngIf="user">{{user.personaname}}</h1>
-<h4 *ngIf="user">{{user.realname}}</h4>
+<h1 *ngIf="user != null">{{user.personaname}}</h1>
+<h4 *ngIf="user != null">{{user.realname}}</h4>
 
-<section id="user-section" *ngIf="user">
+<section id="user-section" *ngIf="user != null">
     <div id="user-card-top-panel">
         <img [attr.src]="user.avatarfull" [attr.title]="user.personaname" [attr.alt]="user.personaname" />
         <div class="user-card-times">
@@ -12,20 +12,33 @@
         </div>
     </div>
 
-    <a [attr.href]="user.profileurl" [attr.title]="user.personaname" id="profile-url">profile url</a>
+    <a [attr.href]="user.profileurl" [attr.title]="user.personaname" id="profile-url">steam url</a>
 
     <div id="user-card-second-panel" *ngIf="user.gameextrainfo">
         <p>Currently in-game: {{user.gameextrainfo}}</p>
         <p>Game id: {{user.gameid}}</p>
     </div>
 
-    <h2 *ngIf="friends.length">FRIENDS</h2>
+    <ul class="nav nav-pills nav-justified text-center" *ngIf="friends != null || games != null">
+        <li [attr.data-active]="friendsActive" id="friends-link" (click)="showFriends()">
+            <a title="friends tab">FRIENDS({{friends!=null?friends.length:0}})</a>
+        </li>
+        <li [attr.data-active]="gamesActive" id="owned-games-link" (click)="showGames()">
+            <a title="owned games tab">GAMES({{gameCount}})</a>
+        </li>
+    </ul>
 
-    <div id="user-card-friends-panel" *ngIf="friends.length">
+    <div id="user-card-friends-panel" *ngIf="friendsActive && friends != null && friends.length">
         <div class="friend-card" *ngFor="let friend of friends">
-            <a [attr.href]="'/user/' + friend.steamid" [attr.title]="friend.steamid">profile URL</a>
+            <a [attr.href]="'/user/' + friend.steamid" title="open profile">id: {{friend.steamid}}</a>
             <p>Friends since: {{friend.friend_since*1000 | date:'fullDate'}}</p>
         </div>
     </div>
 
+    <div id="user-card-games-panel" *ngIf="gamesActive && games != null && games.length">
+        <div class="game-card" *ngFor="let game of games">
+            <a [attr.href]="'/achievements/list/' + game.appid" title="open achievements">id: {{game.appid}}</a>
+            <p>Played hours: {{(game.playtime_forever / 60) | number}}</p>
+        </div>
+    </div>
 </section>

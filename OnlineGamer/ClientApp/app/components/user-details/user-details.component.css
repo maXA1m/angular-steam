@@ -10,19 +10,6 @@
     text-overflow: ellipsis;
 }
 
-h2 {
-    text-transform: uppercase;
-    font-size: 3.2rem;
-    text-align: center;
-    color: #396afc;
-    font-weight: bold;
-    margin-bottom: 15px;
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden !important;
-    text-overflow: ellipsis;
-}
-
 h4 {
     font-size: 2rem;
     text-align: center;
@@ -92,7 +79,8 @@ h4 {
     font-size: 1.5rem;
 }
 
-.friend-card {
+.friend-card,
+.game-card {
     width: 70vw;
     display: flex;
     padding: 30px;
@@ -100,18 +88,66 @@ h4 {
     justify-content: space-between;
     align-items: center;
     border-radius: 5px;
-    border: 5px solid #396afc;
     color: #eee;
     margin-bottom: 45px;
     overflow: hidden;
     font-size: 1.5vw;
 }
 
+.friend-card {
+    border: 5px solid #396afc;
+}
+
+.game-card {
+    border: 5px solid #23C186;
+}
+
 .friend-card a,
 .friend-card a:focus,
-.friend-card a:hover {
+.friend-card a:hover,
+.game-card a,
+.game-card a:focus,
+.game-card a:hover  {
     color: #eee;
     text-decoration: none;
+}
+
+.nav.nav-pills.nav-justified {
+    width: 70%;
+    margin: 15px 0 15px 0;
+}
+
+li {
+    border-radius: 5px;
+}
+
+li a {
+    color: #eee;
+    text-decoration: none;
+}
+
+li.link-active#owned-games-link a,
+li.link-active#owned-games-link a:hover,
+li.link-active#owned-games-link a:focus,
+li#owned-games-link a:hover,
+li#owned-games-link a:focus,
+li#owned-games-link[data-active="true"] {
+    background: #11998e !important; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #38ef7d, #11998e) !important; /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #38ef7d, #11998e) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white !important;
+}
+
+li.link-active#friends-link a,
+li.link-active#friends-link a:hover,
+li.link-active#friends-link a:focus,
+li#friends-link a:hover,
+li#friends-link a:focus,
+li#friends-link[data-active="true"] {
+    background: #396afc !important; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2948ff, #396afc) !important; /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2948ff, #396afc) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white !important;
 }
  
 @media (max-width: 768px){
@@ -128,9 +164,16 @@ h4 {
         padding: 15px 2% 15px 2%;
     }
 
-    .achievement-card {
+
+    .nav.nav-pills.nav-justified {
+        width: 96%;
+        margin: 15px 2% 15px 2%;
+    }
+
+    .friend-card,
+    .game-card{
         width: 96vw;
-        font-size: 5vw;
+        font-size: 2.5vw;
     }
 
 }

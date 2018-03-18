@@ -40,6 +40,27 @@ li#user-link a:focus {
     color: white !important;
 }
 
+
+li.link-active#github-link a,
+li.link-active#github-link a:hover,
+li.link-active#github-link a:focus,
+li#github-link a:hover,
+li#github-link a:focus {
+    background: #eee !important;
+    color: #333 !important;
+}
+
+li.link-active#search-link a,
+li.link-active#search-link a:hover,
+li.link-active#search-link a:focus,
+li#search-link a:hover,
+li#search-link a:focus {
+    background: #4e54c8; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8f94fb, #4e54c8); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8f94fb, #4e54c8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white !important;
+}
+
 /* Keep the nav menu independent of scrolling and on top of other items */
 .main-nav {
     position: fixed; 

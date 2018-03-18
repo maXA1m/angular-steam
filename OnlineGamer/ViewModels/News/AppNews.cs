@@ -10,5 +10,8 @@ namespace OnlineGamer.ViewModels.News
 
         [JsonProperty("newsitems")]
         public ICollection<NewsItem> NewsItems { get; set; }
+
+        [JsonProperty("count")]
+        public int Count { get; set; }
     }
 }

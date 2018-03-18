@@ -1,4 +1,4 @@
-﻿<article class="achievement-card">
+﻿<article class="achievement-card" *ngIf="achievement != null">
     <div class="achievement-card-top-panel">
         <img class="achievement-card-description" [attr.alt]="achievement.displayName" title="Achievement name" [attr.src]="achievement.icon">
         <div class="achievement-card-name-panel">

@@ -1,9 +1,17 @@
 <h1>NEWS</h1>
 
-<section id="news-section" *ngIf="news.length;else error_message">
+<section id="news-section" *ngIf="news != null && news.length;else loading_message">
     <news-card *ngFor="let n of news" [gamenew]="n"></news-card>
+    <p class="news-empty">All news: {{count}}</p>
 </section>
 
 <ng-template id="news-section" #error_message>
     <p class="news-empty">Game has no news</p>
+</ng-template>
+
+<ng-template id="news-section" #loading_message>
+    <p class="news-empty" *ngIf="news == null && loading; else error_message">Loading...</p>
+    <!--<div id="preloader" *ngIf="news == null && loading; else error_message">
+        <div id="loader"></div>
+    </div>-->
 </ng-template>

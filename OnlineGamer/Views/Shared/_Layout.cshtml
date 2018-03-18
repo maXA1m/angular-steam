@@ -19,8 +19,20 @@
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
     <link rel="stylesheet" href="~/dist/vendor.css" asp-append-version="true" />
 
+    <style>
+        body,
+        html {
+            background: #000 !important;
+            font-family: 'Titillium Web', sans-serif;
+        }
+
+        ::selection {
+            background: rgba(100, 100, 100, .5) !important;
+        }
+    </style>
+
 </head>
-<body style="background: #000 !important; font-family: 'Titillium Web', sans-serif;">
+<body>
     @RenderBody()
 
     @RenderSection("scripts", required: false)

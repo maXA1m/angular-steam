@@ -17,6 +17,7 @@ export class UserpickComponent {
         if(userId)
             this.userId = userId;
 
-        this.router.navigate(['/user/' + this.userId]);
+        if (this.userId)
+            this.router.navigate(['/user/' + this.userId]);
     }
 }

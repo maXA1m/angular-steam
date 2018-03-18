@@ -13,16 +13,27 @@ import { GameNews } from '../../models/game-news.model';
 export class NewsComponent {
     game: Game;
     news: GameNews[];
+    count: number;
+    loading: boolean;
 
     constructor(private activateRoute: ActivatedRoute, http: Http, @Inject('BASE_URL') baseUrl: string) {
+        this.loading = true;
+
         /*  Getting data from route  */
         this.game = new Game();
         this.game.id = activateRoute.snapshot.params['gameId'];
-        this.game.name = activateRoute.snapshot.params['gameName'];
 
         /*  Getting news for game  */
         http.get(baseUrl + 'api/news/' + this.game.id).subscribe(result => {
-            this.news = result.json().appnews.newsitems as GameNews[];
-        }, error => console.error(error));
+            const json = result.json();
+
+            if (json.appnews.newsitems)
+                this.news = json.appnews.newsitems as GameNews[];
+
+            if (json.appnews.count)
+                this.count = json.appnews.count as number;
+
+            this.loading = false;
+        }, error => { console.error(error); this.loading = false; });
     }
 }

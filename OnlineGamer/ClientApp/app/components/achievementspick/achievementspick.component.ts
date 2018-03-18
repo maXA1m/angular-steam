@@ -12,10 +12,11 @@ export class AchievementspickComponent {
 
     constructor() {
         this.games = [
-            new Game(730, 'CS : GO', 'csgo'),
-            new Game(570, 'DOTA 2', 'dota'),
-            new Game(578080, 'PUBG', 'pubg'),
-            new Game(271590, 'GTA 5', 'gta')
+            new Game(730, 'CS : GO'),
+            new Game(570, 'DOTA 2'),
+            new Game(578080, 'PUBG'),
+            new Game(271590, 'GTA 5'),
+            new Game(252490, 'RUST')
         ];
     }
 }

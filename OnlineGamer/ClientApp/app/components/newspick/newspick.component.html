@@ -1,7 +1,7 @@
 ﻿<h1>NEWS</h1>
 
 <section id="pick-game-menu">
-    <a [attr.data-game-type]="game.nameURL" [routerLink]="['/news/' + game.id + '/' + game.nameURL]" *ngFor="let game of games" class="d-flex flex-row justify-content-center align-items-center game-button">
+    <a [attr.data-game-id]="game.id" [routerLink]="['/news/' + game.id]" *ngFor="let game of games" class="d-flex flex-row justify-content-center align-items-center game-button">
         <h3>{{game.name}}</h3>
     </a>
 </section>

@@ -1,9 +1,13 @@
-<h1>ACHIEVEMENTS LIST</h1>
+<h1>{{game.name}}</h1>
 
-<section id="achievements-section" *ngIf="achievements.length;else error_message">
+<section id="achievements-section" *ngIf="achievements != null && achievements.length; else loading_message">
     <achievement-list-card *ngFor="let a of achievements" [achievement]="a"></achievement-list-card>
 </section>
 
 <ng-template id="achievements-section" #error_message>
     <p class="achievements-empty">Game has no achievements</p>
+</ng-template>
+
+<ng-template id="achievements-section" #loading_message>
+    <p class="achievements-empty" *ngIf="achievements == null && loading; else error_message">Loading...</p>
 </ng-template>

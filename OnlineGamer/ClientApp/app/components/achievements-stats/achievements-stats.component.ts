@@ -13,16 +13,22 @@ import { GameAchievement } from '../../models/game-acivement.model';
 export class AchievementsStatsComponent {
     game: Game;
     achievements: GameAchievement[];
+    loading: boolean;
 
     constructor(private activateRoute: ActivatedRoute, http: Http, @Inject('BASE_URL') baseUrl: string) {
+        this.loading = true;
+
         /*  Getting data from route  */
         this.game = new Game();
         this.game.id = activateRoute.snapshot.params['gameId'];
-        this.game.name = activateRoute.snapshot.params['gameName'];
 
         /*  Getting news for game  */
         http.get(baseUrl + 'api/achievements/' + this.game.id).subscribe(result => {
-            this.achievements = result.json().achievementpercentages.achievements as GameAchievement[];
-        }, error => console.error(error));
+            const json = result.json();
+            if (json.achievementpercentages != null && json.achievementpercentages.achievements != null)
+                this.achievements = json.achievementpercentages.achievements as GameAchievement[];
+
+            this.loading = false;
+        }, error => { console.error(error); this.loading = false; });
     }
 }

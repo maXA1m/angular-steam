@@ -62,5 +62,28 @@ namespace OnlineGamer.Controllers.Api
                 }
             }
         }
+
+        [Route("api/users/games/{id}")]
+        public async Task<IActionResult> GetUserGames(string id)
+        {
+            using (HttpClient steam = new HttpClient())
+            {
+                try
+                {
+                    steam.BaseAddress = new Uri(API_URI);
+                    var response = await steam.GetAsync($"IPlayerService/GetOwnedGames/v0001/?key={API_KEY}&steamid={id}");
+                    response.EnsureSuccessStatusCode();
+
+                    string result = await response.Content.ReadAsStringAsync();
+                    var json = JsonConvert.DeserializeObject<SteamUserGamesResponse>(result);
+
+                    return Ok(json);
+                }
+                catch (HttpRequestException ex)
+                {
+                    return BadRequest($"Error getting user {id}: {ex.Message}");
+                }
+            }
+        }
     }
 }

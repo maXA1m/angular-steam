@@ -20,6 +20,8 @@ import { AchievementListCardComponent } from './components/achievement-list-card
 import { UserpickComponent } from './components/userpick/userpick.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 
+import { SearchComponent } from './components/search/search.component';
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -36,7 +38,9 @@ import { UserDetailsComponent } from './components/user-details/user-details.com
         AchievementListCardComponent,
 
         UserpickComponent,
-        UserDetailsComponent
+        UserDetailsComponent,
+
+        SearchComponent
     ],
     imports: [
         CommonModule,
@@ -44,18 +48,20 @@ import { UserDetailsComponent } from './components/user-details/user-details.com
         FormsModule,
         RouterModule.forRoot([
             { path: '', redirectTo: 'news', pathMatch: 'full' },
-
+        
             { path: 'news', component: NewspickComponent },
-            { path: 'news/:gameId/:gameName', component: NewsComponent },
+            { path: 'news/:gameId', component: NewsComponent },
 
             { path: 'achievements', component: AchievementspickComponent },
-            { path: 'achievements/list/:gameId/:gameName', component: AchievementsListComponent },
-            { path: 'achievements/stats/:gameId/:gameName', component: AchievementsStatsComponent },
+            { path: 'achievements/list/:gameId', component: AchievementsListComponent },
+            { path: 'achievements/stats/:gameId', component: AchievementsStatsComponent },
 
             { path: 'user', component: UserpickComponent },
             { path: 'user/:id', component: UserDetailsComponent },
 
-            { path: '**', redirectTo: 'news' }
+            { path: 'search', component: SearchComponent },
+
+            { path: '**', redirectTo: 'achievements' }
         ])
     ]
 })
