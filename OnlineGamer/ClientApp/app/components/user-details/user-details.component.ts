@@ -15,6 +15,8 @@ export class UserDetailsComponent {
     userId: string;
     user: User;
 
+    loading: boolean;
+
     friends: Friend[];
 
     games: OwnedGame[];
@@ -24,6 +26,8 @@ export class UserDetailsComponent {
     friendsActive: boolean;
 
     constructor(private activateRoute: ActivatedRoute, http: Http, @Inject('BASE_URL') baseUrl: string) {
+        this.loading = true;
+
         this.friendsActive = true;
         this.gamesActive = false;
 
@@ -38,7 +42,9 @@ export class UserDetailsComponent {
 
             if (json.response.players != null)
                 this.user = json.response.players[0] as User;
-        }, error => console.error(error));
+
+            this.loading = false;
+        }, error => { console.error(error); this.loading = false; });
 
         http.get(baseUrl + 'api/users/friends/' + this.userId).subscribe(result => {
             const json = result.json();

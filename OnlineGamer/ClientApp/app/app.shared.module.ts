@@ -47,7 +47,7 @@ import { SearchComponent } from './components/search/search.component';
         HttpModule,
         FormsModule,
         RouterModule.forRoot([
-            { path: '', redirectTo: 'news', pathMatch: 'full' },
+            { path: '', redirectTo: 'search', pathMatch: 'full' },
         
             { path: 'news', component: NewspickComponent },
             { path: 'news/:gameId', component: NewsComponent },
@@ -61,7 +61,7 @@ import { SearchComponent } from './components/search/search.component';
 
             { path: 'search', component: SearchComponent },
 
-            { path: '**', redirectTo: 'achievements' }
+            { path: '**', redirectTo: 'search' }
         ])
     ]
 })

@@ -1,7 +1,7 @@
 ﻿h1 {
     font-size: 5rem;
     text-align: center;
-    color: #396afc;
+    color: #F7971E;
     font-weight: bold;
     margin-bottom: 15px;
     width: 100%;
@@ -31,7 +31,7 @@ h4 {
 
 .user-card-times {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: #eee;
 }
 
@@ -40,8 +40,10 @@ h4 {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 70%;
+    width: 70vw;
     padding: 15px 5% 15px 5%;
+    border-radius: 5px;
+    border: 5px solid #F7971E;
 }
 
 #user-card-top-panel img {
@@ -52,7 +54,7 @@ h4 {
 #profile-url:focus,
 #profile-url:hover {
     display: block;
-    color: #396afc;
+    color: #F7971E;
     width: 100%;
     margin: 30px 0 30px 0;
     text-align: center;
@@ -63,7 +65,6 @@ h4 {
 #user-card-second-panel {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     width: 80%;
@@ -76,7 +77,7 @@ h4 {
     text-overflow: ellipsis;
     text-align: center;
     color: #23C186;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 .friend-card,
@@ -95,7 +96,7 @@ h4 {
 }
 
 .friend-card {
-    border: 5px solid #396afc;
+    border: 5px solid #F7971E;
 }
 
 .game-card {
@@ -108,8 +109,18 @@ h4 {
 .game-card a,
 .game-card a:focus,
 .game-card a:hover  {
+    display: block;
     color: #eee;
     text-decoration: none;
+    white-space: nowrap;
+}
+
+.user-empty {
+    margin-top: 30vh;
+    text-align: center;
+    width: 100%;
+    color: #eee;
+    font-size: 2rem;
 }
 
 .nav.nav-pills.nav-justified {
@@ -144,9 +155,9 @@ li.link-active#friends-link a:focus,
 li#friends-link a:hover,
 li#friends-link a:focus,
 li#friends-link[data-active="true"] {
-    background: #396afc !important; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2948ff, #396afc) !important; /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2948ff, #396afc) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #F7971E; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFD200, #F7971E); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: white !important;
 }
  
@@ -155,15 +166,19 @@ li#friends-link[data-active="true"] {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        width: 96%;
+        width: 96vw;
         padding: 15px 2% 15px 2%;
     }
 
     #user-card-second-panel {
-        width: 96%;
+        flex-direction: column;
+        width: 96vw;
         padding: 15px 2% 15px 2%;
     }
 
+    #user-card-second-panel p {
+        max-width: 95vw;
+    }
 
     .nav.nav-pills.nav-justified {
         width: 96%;
@@ -171,9 +186,15 @@ li#friends-link[data-active="true"] {
     }
 
     .friend-card,
-    .game-card{
+    .game-card {
         width: 96vw;
-        font-size: 2.5vw;
+        font-size: 4vw;
     }
 
+    .friend-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
 }

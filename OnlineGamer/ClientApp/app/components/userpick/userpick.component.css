@@ -8,7 +8,7 @@
     white-space: nowrap;
     overflow: hidden !important;
     text-overflow: ellipsis;
-    color: #3158FD;
+    color: #F7971E;
 }
 
 #userpick-section {
@@ -41,8 +41,10 @@
 
 #submit-button,
 #submit-button:focus {
-    background: #3158FD !important;
-    border: 2px solid #3158FD !important;
+    background: #F7971E; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFD200, #F7971E); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFD200, #F7971E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: none;
 }
 
 .text-white {

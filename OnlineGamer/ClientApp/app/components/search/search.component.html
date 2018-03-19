@@ -4,7 +4,7 @@
     <div class="form-group" id="input-group">
         <label for="game" class="text-white">Enter Steam game ID:</label>
         <input #gameInput (keyup.enter)="onEnter(gameInput.value)" type="text" class="form-control" name="game" id="game">
-        <small class="form-text text-white">You can find game ID in adress bar on game page.[<a href="http://store.steampowered.com/app/271590/Grand_Theft_Auto_V/" title="Gta 5">GTA 5</a> ID - 271590]</small>
+        <small class="form-text text-white">You can find game ID in adress bar on game page</small>
     </div>
     <div class="form-group" id="radio-group">
         <label class="radio-inline"><input type="radio" name="searchType" (click)="onChange('news')" value="news">News</label>
