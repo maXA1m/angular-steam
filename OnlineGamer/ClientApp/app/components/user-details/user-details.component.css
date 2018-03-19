@@ -110,9 +110,20 @@ h4 {
 .game-card a:focus,
 .game-card a:hover  {
     display: block;
-    color: #eee;
     text-decoration: none;
     white-space: nowrap;
+}
+
+.friend-card a,
+.friend-card a:focus,
+.friend-card a:hover {
+    color: #F7971E;
+}
+
+.game-card a,
+.game-card a:focus,
+.game-card a:hover {
+    color: #23C186;
 }
 
 .user-empty {

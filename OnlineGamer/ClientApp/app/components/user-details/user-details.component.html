@@ -18,7 +18,7 @@
             <p>Game id: {{user.gameid}}</p>
         </div>
 
-        <a [attr.href]="user.profileurl" [attr.title]="user.personaname" id="profile-url">steam url</a>
+        <a [attr.href]="user.profileurl" [attr.title]="user.personaname" id="profile-url" target="_blank">steam url</a>
 
         <ul class="nav nav-pills nav-justified text-center" *ngIf="friends != null || games != null">
             <li [attr.data-active]="friendsActive" id="friends-link" (click)="showFriends()">
